@@ -34,7 +34,7 @@ db.once("open", () => {
     console.log("Database connected");
 });
 
-app.use(express.static(__dirname + "/public"));
+app.use(express.static(__dirname + "/src/public"));
 
 
 //when the bot is ready to work
@@ -44,7 +44,7 @@ client.on("ready",() =>
 });
 
 app.get("/", (req,res) => {
-    res.sendFile(__dirname + "/views/index.html");
+    res.sendFile(__dirname + "/src/views/index.html");
 });
 
 //hello message on entering a new server
